@@ -16,8 +16,19 @@
 .add-movie-class {
   display: flex;
   flex-direction: column;
-  max-width: fit-content;
+  /* max-width: fit-content; */
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   /* background-color: yellow; */
+  height: 80vh;
+  width: 30vw;
+}
+
+#name,
+#summary,
+#poster,
+#rating,
+#trailer {
+  height: 10px;
+  width: 25vw;
 }
