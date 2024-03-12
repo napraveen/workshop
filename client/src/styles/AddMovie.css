@@ -21,7 +21,8 @@
   justify-content: space-around;
   /* background-color: yellow; */
   height: 80vh;
-  width: 30vw;
+  width: 35vw;
+  border: 1px solid black;
 }
 
 #name,
