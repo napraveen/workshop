@@ -4,7 +4,6 @@ import Button from '@mui/material/Button';
 import '../styles/AddMovie.css';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
-import { formControlClasses } from '@mui/material';
 const AddMovie = () => {
   const movieValidationSchema = yup.object({
     name: yup.string().required(),

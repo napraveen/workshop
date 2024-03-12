@@ -1,0 +1,27 @@
+.register-container {
+  /* background-color: black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  /* margin-top: 10vh; */
+}
+
+.register-class {
+  display: flex;
+  flex-direction: column;
+  /* max-width: fit-content; */
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: yellow; */
+  height: 80vh;
+  width: 30vw;
+}
+
+#username,
+#email,
+#password {
+  height: 10px;
+  width: 25vw;
+}
