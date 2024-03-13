@@ -15,13 +15,14 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-const Movie = () => {
+const Movie = ({ movieTake }) => {
   const [show, setShow] = useState(true);
+
   return (
     <Card className="movie-container">
       <CardMedia
         // sx={{ height: 300 }}
-        image={vikramImage}
+        image={movieTake.poster}
         title="green iguana"
         className="movie-poster"
       />
@@ -30,7 +31,7 @@ const Movie = () => {
         <div className="movie-spec">
           <h2 className="movie-name">
             {" "}
-            Vikram
+            {movieTake.name}
             <IconButton
               color="primary"
               aria-label="Toggle-Description"
@@ -46,17 +47,13 @@ const Movie = () => {
               <InfoIcon fontSize="medium" />
             </IconButton>
           </h2>
-          <h3 className="movie-rating">🌟7.5</h3>
+          <h3 className="movie-rating">🌟{movieTake.rating}</h3>
         </div>
       </CardContent>
       {show ? (
-        <p className="movie-summary">
-          "Vikram" is a gripping thriller where an undercover agent navigates
-          through a web of deceit to uncover a conspiracy threatening national
-          security, testing his loyalty and resolve. With high-octane action and
-          intense drama, it keeps viewers on the edge of their seats from start
-          to finish.
-        </p>
+        <div className="movie-summary-container">
+          <p className="movie-summary">{movieTake.summary}</p>
+        </div>
       ) : (
         ""
       )}

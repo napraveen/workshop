@@ -10,6 +10,7 @@ import Portal from "./components/Portal";
 import Home from "./components/Home";
 import NotFound from "./components/NotFound";
 import Movie from "./components/Movie";
+import MovieList from "./components/MovieList";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
         <Route path="/portal" element={<Portal />}>
           <Route path="addmovie" element={<AddMovie />} />
           <Route path="home" element={<Home />} />
-          <Route path="movie" element={<Movie />} />
+          <Route path="movie" element={<MovieList />} />
+          {/* <Route path="movie" element={<Movie />} /> */}
         </Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
