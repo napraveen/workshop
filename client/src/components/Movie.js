@@ -4,6 +4,8 @@ import "../styles/movie.css";
 import Counter from "./Counter";
 import IconButton from "@mui/material/IconButton";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import InfoIcon from "@mui/icons-material/Info";
+// import IconButton from "@mui/material/IconButton";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 const Movie = () => {
   const [show, setShow] = useState(true);
@@ -24,6 +26,9 @@ const Movie = () => {
             ) : (
               <ExpandMoreIcon fontSize="large" />
             )}
+          </IconButton>
+          <IconButton color="primary" aria-label="Movie-Info">
+            <InfoIcon fontSize="medium" />
           </IconButton>
         </h2>
         <h3 className="movie-rating">🌟7.5</h3>
