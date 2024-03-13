@@ -11,7 +11,7 @@
 
 .movie-poster {
   height: 300px;
-  width: 300px;
+  width: 100%;
   object-fit: cover;
   border-radius: 20px;
 }

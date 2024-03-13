@@ -7,37 +7,48 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import InfoIcon from "@mui/icons-material/Info";
 // import IconButton from "@mui/material/IconButton";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+
 const Movie = () => {
   const [show, setShow] = useState(true);
   return (
-    <div className="movie-container">
-      <img className="movie-poster" src={vikramImage} alt="" />
-      <div className="movie-spec">
-        <h2 className="movie-name">
-          {" "}
-          Vikram
-          <IconButton
-            color="primary"
-            aria-label="Toggle-Description"
-            onClick={() => setShow(!show)}
-          >
-            {show ? (
-              <ExpandLessIcon fontSize="large" />
-            ) : (
-              <ExpandMoreIcon fontSize="large" />
-            )}
-          </IconButton>
-          <IconButton color="primary" aria-label="Movie-Info">
-            <InfoIcon fontSize="medium" />
-          </IconButton>
-        </h2>
-        <h3 className="movie-rating">🌟7.5</h3>
-      </div>
-      {/* <button onClick={() => setShow(!show)}>
-          Toggle Description - {show + ""}
-        </button> */}
-
-      {/* conditional rendering */}
+    <Card className="movie-container">
+      <CardMedia
+        // sx={{ height: 300 }}
+        image={vikramImage}
+        title="green iguana"
+        className="movie-poster"
+      />
+      <CardContent>
+        {" "}
+        <div className="movie-spec">
+          <h2 className="movie-name">
+            {" "}
+            Vikram
+            <IconButton
+              color="primary"
+              aria-label="Toggle-Description"
+              onClick={() => setShow(!show)}
+            >
+              {show ? (
+                <ExpandLessIcon fontSize="large" />
+              ) : (
+                <ExpandMoreIcon fontSize="large" />
+              )}
+            </IconButton>
+            <IconButton color="primary" aria-label="Movie-Info">
+              <InfoIcon fontSize="medium" />
+            </IconButton>
+          </h2>
+          <h3 className="movie-rating">🌟7.5</h3>
+        </div>
+      </CardContent>
       {show ? (
         <p className="movie-summary">
           "Vikram" is a gripping thriller where an undercover agent navigates
@@ -49,8 +60,11 @@ const Movie = () => {
       ) : (
         ""
       )}
-      <Counter />
-    </div>
+      <CardActions>
+        {" "}
+        <Counter />
+      </CardActions>
+    </Card>
   );
 };
 
