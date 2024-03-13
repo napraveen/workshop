@@ -7,7 +7,9 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import AppBar from "@mui/material/AppBar"; // Importing AppBar
 import { useNavigate } from "react-router-dom";
-export default function TopBar() {
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+
+export default function TopBar({ mode, setMode }) {
   const navigate = useNavigate();
   return (
     <div>
@@ -22,6 +24,16 @@ export default function TopBar() {
           </Button>
           <Button color="inherit" onClick={() => navigate("/portal/movie")}>
             Movies
+          </Button>
+          <Button
+            style={{ marginLeft: "60%" }}
+            startIcon={
+              mode === "light" ? <Brightness4Icon /> : <Brightness4Icon />
+            }
+            color="inherit"
+            onClick={() => setMode(mode === "light" ? "dark" : "light")}
+          >
+            {mode === "light" ? "dark" : "light"}Mode
           </Button>
           <Button
             style={{ marginLeft: "auto" }}

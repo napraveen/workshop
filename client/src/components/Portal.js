@@ -2,10 +2,10 @@ import React from "react";
 import TopBar from "./TopBar";
 import { Outlet } from "react-router";
 import "../styles/portal.css";
-const Portal = () => {
+const Portal = ({ mode, setMode }) => {
   return (
     <div className="portal">
-      <TopBar />
+      <TopBar mode={mode} setMode={setMode} />
       <Outlet />
     </div>
   );
