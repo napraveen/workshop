@@ -8,6 +8,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import AppBar from "@mui/material/AppBar"; // Importing AppBar
 import { useNavigate } from "react-router-dom";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
 
 export default function TopBar({ mode, setMode }) {
   const navigate = useNavigate();
@@ -28,7 +29,7 @@ export default function TopBar({ mode, setMode }) {
           <Button
             style={{ marginLeft: "60%" }}
             startIcon={
-              mode === "light" ? <Brightness4Icon /> : <Brightness4Icon />
+              mode === "light" ? <Brightness4Icon /> : <Brightness7Icon />
             }
             color="inherit"
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
