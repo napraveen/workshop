@@ -3,14 +3,55 @@
   border: 0;
   box-sizing: border-box;
 }
-.add-movie-container {
-  /* background-color: black; */
+/* .add-movie-container {
+  background-color: #f0f3ff;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100vw;
-  /* margin-top: 10vh; */
+  background: url("../images/best-Tamil-movies-of-2021.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  opacity: 0.2;
+  overflow-x: hidden;
+  overflow-y: hidden;
+} */
+
+.add-movie-container {
+  background-color: #f0f3ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.add-movie-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../images/best-Tamil-movies-of-2021.jpg");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  opacity: 0.15;
+}
+
+.add-movie-class {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(0, 0, 0);
+  height: 80vh;
+  width: 35vw;
+  border: 2px solid black;
 }
 
 .add-movie-class {
@@ -19,10 +60,10 @@
   /* max-width: fit-content; */
   align-items: center;
   justify-content: space-around;
-  /* background-color: yellow; */
+  background-color: rgba(255, 255, 255, 1);
   height: 80vh;
   width: 35vw;
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 #name,
@@ -32,4 +73,5 @@
 #trailer {
   height: 10px;
   width: 25vw;
+  background-color: white;
 }

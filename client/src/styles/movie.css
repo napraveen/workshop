@@ -1,0 +1,33 @@
+.movie-container {
+  margin: 30px;
+  padding: 10px 10px 10px 0px;
+  width: 300px;
+  box-shadow: 5px 10px 20px rgba(245, 74, 74, 0.5);
+
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+
+.movie-poster {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.movie-spec {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.movie-summary {
+  text-align: justify;
+}
+
+/* .addForm {
+  display: flex;
+} */

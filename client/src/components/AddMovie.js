@@ -1,9 +1,9 @@
-import React from 'react';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import '../styles/AddMovie.css';
-import { useFormik } from 'formik';
-import * as yup from 'yup';
+import React from "react";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import "../styles/AddMovie.css";
+import { useFormik } from "formik";
+import * as yup from "yup";
 const AddMovie = () => {
   const movieValidationSchema = yup.object({
     name: yup.string().required(),
@@ -15,11 +15,11 @@ const AddMovie = () => {
 
   const formik = useFormik({
     initialValues: {
-      name: '',
-      poster: '',
-      trailer: '',
-      rating: '',
-      summary: '',
+      name: "",
+      poster: "",
+      trailer: "",
+      rating: "",
+      summary: "",
     },
     validationSchema: movieValidationSchema,
     onSubmit: (values) => {
@@ -28,9 +28,9 @@ const AddMovie = () => {
   });
   return (
     <div className="add-movie-container">
-      {' '}
+      {" "}
       <form className="add-movie-class" onSubmit={formik.handleSubmit}>
-        Add Movie
+        <h1> Add Movie</h1>
         <TextField
           id="name"
           className="textfield"

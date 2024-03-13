@@ -7,6 +7,9 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import TopBar from "./components/TopBar";
 import Portal from "./components/Portal";
+import Home from "./components/Home";
+import NotFound from "./components/NotFound";
+import Movie from "./components/Movie";
 
 function App() {
   return (
@@ -16,7 +19,10 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/portal" element={<Portal />}>
           <Route path="addmovie" element={<AddMovie />} />
+          <Route path="home" element={<Home />} />
+          <Route path="movie" element={<Movie />} />
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

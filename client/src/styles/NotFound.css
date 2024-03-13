@@ -1,0 +1,34 @@
+.notfound-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.notfound-container h1 {
+  font-size: 70px;
+}
+
+.notfoundimage {
+  height: 600px;
+  width: 600px;
+}
+
+.backbutton {
+  height: 70px;
+  width: 300px;
+  background-color: greenyellow;
+  border-radius: 5px;
+  font-size: 20px;
+  color: black;
+}
+
+.backbutton:hover {
+  background-color: rgb(136, 200, 41);
+  cursor: pointer;
+}
+
+.backbutton {
+}

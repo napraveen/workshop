@@ -1,9 +1,10 @@
-import React from 'react';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import { useFormik } from 'formik';
-import * as yup from 'yup';
-import '../styles/Register.css';
+import React from "react";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import { useFormik } from "formik";
+import * as yup from "yup";
+import "../styles/Register.css";
+import { Link } from "react-router-dom";
 const Register = () => {
   const registerValidationSchema = yup.object({
     username: yup.string().required(),
@@ -13,9 +14,9 @@ const Register = () => {
 
   const formik = useFormik({
     initialValues: {
-      username: '',
-      email: '',
-      password: '',
+      username: "",
+      email: "",
+      password: "",
     },
     validationSchema: registerValidationSchema,
     onSubmit: (values) => {
@@ -24,7 +25,7 @@ const Register = () => {
   });
   return (
     <div className="register-container">
-      {' '}
+      {" "}
       <form className="register-class" onSubmit={formik.handleSubmit}>
         Register
         <TextField
@@ -79,6 +80,9 @@ const Register = () => {
         <Button variant="contained" type="submit">
           submit
         </Button>
+        <h3>
+          Already have an account? Click here <Link to="/login">Login</Link>
+        </h3>
       </form>
     </div>
   );

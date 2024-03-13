@@ -1,9 +1,10 @@
-import React from 'react';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import { useFormik } from 'formik';
-import * as yup from 'yup';
-import '../styles/login.css';
+import React from "react";
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import { useFormik } from "formik";
+import * as yup from "yup";
+import "../styles/login.css";
+import { Link } from "react-router-dom";
 const Login = () => {
   const loginValidationSchema = yup.object({
     email: yup.string().required().min(4),
@@ -12,8 +13,8 @@ const Login = () => {
 
   const formik = useFormik({
     initialValues: {
-      email: '',
-      password: '',
+      email: "",
+      password: "",
     },
     validationSchema: loginValidationSchema,
     onSubmit: (values) => {
@@ -22,7 +23,7 @@ const Login = () => {
   });
   return (
     <div className="login-container">
-      {' '}
+      {" "}
       <form className="login-class" onSubmit={formik.handleSubmit}>
         Login
         <TextField
@@ -61,6 +62,9 @@ const Login = () => {
         <Button variant="contained" type="submit">
           submit
         </Button>
+        <h4>
+          Don't you have an account? Click Here <Link to="/">Register</Link>
+        </h4>
       </form>
     </div>
   );
