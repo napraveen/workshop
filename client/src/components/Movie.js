@@ -7,7 +7,7 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import InfoIcon from "@mui/icons-material/Info";
 // import IconButton from "@mui/material/IconButton";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
+import EditIcon from "@mui/icons-material/Edit";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -64,6 +64,13 @@ const Movie = ({ movieTake }) => {
       <CardActions>
         {" "}
         <Counter />
+        <IconButton
+          sx={{ marginLeft: "auto" }}
+          aria-label="editMovie"
+          onClick={() => navigate(`/portal/edit/${movieTake.id}`)}
+        >
+          <EditIcon color="secondary" />
+        </IconButton>
       </CardActions>
     </Card>
   );

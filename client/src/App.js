@@ -14,6 +14,7 @@ import Paper from "@mui/material/Paper";
 import MovieList from "./components/MovieList";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import MovieDetail from "./components/MovieDetail";
+import EditMovie from "./components/EditMovie";
 
 function App() {
   const [mode, setMode] = useState("dark");
@@ -39,6 +40,7 @@ function App() {
               <Route path="home" element={<Home />} />
               <Route path="movie" element={<MovieList />} />
               {/* <Route path="movie" element={<Movie />} /> */}
+              <Route path="edit/:id" element={<EditMovie/>}/>
               <Route path="view/:id" element={<MovieDetail />} />
             </Route>
 
