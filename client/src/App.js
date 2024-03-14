@@ -13,6 +13,7 @@ import Movie from "./components/Movie";
 import Paper from "@mui/material/Paper";
 import MovieList from "./components/MovieList";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import MovieDetail from "./components/MovieDetail";
 
 function App() {
   const [mode, setMode] = useState("dark");
@@ -38,7 +39,9 @@ function App() {
               <Route path="home" element={<Home />} />
               <Route path="movie" element={<MovieList />} />
               {/* <Route path="movie" element={<Movie />} /> */}
+              <Route path="view/:id" element={<MovieDetail />} />
             </Route>
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Paper>

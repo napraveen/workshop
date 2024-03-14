@@ -4,7 +4,10 @@ import Button from "@mui/material/Button";
 import "../styles/AddMovie.css";
 import { useFormik } from "formik";
 import * as yup from "yup";
+import { useNavigate } from "react-router-dom";
 const AddMovie = () => {
+  const navigate = useNavigate();
+
   const movieValidationSchema = yup.object({
     name: yup.string().required(),
     poster: yup.string().required().min(10).url(),
@@ -22,10 +25,20 @@ const AddMovie = () => {
       summary: "",
     },
     validationSchema: movieValidationSchema,
-    onSubmit: (values) => {
-      console.log(values);
+    onSubmit: (newMovie) => {
+      addMovie(newMovie);
+      console.log(newMovie);
     },
   });
+
+  const addMovie = (newMovie) => {
+    fetch("https://65f16f3f034bdbecc7629408.mockapi.io/Movies", {
+      method: "POST",
+      body: JSON.stringify(newMovie),
+      headers: { "Content-Type": "application/json" },
+    }).then(() => navigate("/portal/movie"));
+  };
+
   return (
     <div className="add-movie-container">
       {" "}

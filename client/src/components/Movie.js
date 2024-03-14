@@ -14,10 +14,11 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { useNavigate } from "react-router";
 
 const Movie = ({ movieTake }) => {
   const [show, setShow] = useState(true);
-
+  const navigate = useNavigate();
   return (
     <Card className="movie-container">
       <CardMedia
@@ -44,7 +45,10 @@ const Movie = ({ movieTake }) => {
               )}
             </IconButton>
             <IconButton color="primary" aria-label="Movie-Info">
-              <InfoIcon fontSize="medium" />
+              <InfoIcon
+                fontSize="medium"
+                onClick={() => navigate(`/portal/view/${movieTake.id} `)}
+              />
             </IconButton>
           </h2>
           <h3 className="movie-rating">🌟{movieTake.rating}</h3>
